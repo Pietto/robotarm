@@ -1,0 +1,74 @@
+<html>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="./robotarm.js"></script>
+        <script>
+            // Robotarm bibliotheek inladen
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            robotArm.speed= 500
+            // Het level inladen
+                robotArm.randomLevel(1,8);
+            
+            // Jou instructies volgen hier
+
+            var aantal = 1
+            var loop = 8
+
+            for (var a = 1; a <loop; a++) {
+                robotArm.grab();
+                robotArm.scan();
+            if (robotArm.scan()==null){
+                robotArm.drop();
+                var loop = 1
+            }else{
+                for (var b = 0; b <aantal; b++) {
+                robotArm.moveRight();
+            }
+                var aantal = aantal+1
+                robotArm.drop()
+                for (var b = 0; b <aantal; b++) {
+                robotArm.moveLeft();
+            }
+        }
+    }
+
+
+
+            /*var aantal = 1
+
+            for (var a = 0; a <6; a++) {
+            robotArm.grab();
+            robotArm.scan();
+            if(robotArm.scan()=="green","white","red","blue"){
+            for (var b = 0; b <aantal; b++) {
+                robotArm.moveRight();
+            }
+                robotArm.drop();
+            for (var c = 0; c <aantal; c++) {
+                robotArm.moveLeft();
+            }
+                var aantal = aantal-1
+            }else{
+                robotArm.drop();
+            }
+        }*/
+
+
+
+        
+            /*
+            for (var i = 0; i <4; i++) {
+            }
+            robotArm.scan();
+            robotArm.grab();
+            robotArm.moveRight();
+            robotArm.moveLeft();
+            robotArm.drop();
+            */
+            
+            // De door jou opgegeven instructies uitvoeren
+            robotArm.run();
+        </script>
+    </body>
+</html>

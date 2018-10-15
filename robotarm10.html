@@ -16,18 +16,19 @@
 
             for (var i = 0; i <5; i++) {
                 robotArm.grab();
-            for (var j = 0; j <aantal; j++) {
-                robotArm.moveRight()
-            }
-            var aantal = aantal-1
+                for (var j = 0; j <aantal; j++) {
+                    robotArm.moveRight()
+                }
+                
+                var aantal = aantal-1
+                
                 robotArm.drop();
             for (var k = 0; k <aantal; k++) {
                 robotArm.moveLeft();
             }
             var aantal = aantal-1
-        }
-m.drop();
-            */
+            }
+
             
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();

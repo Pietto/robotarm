@@ -17,24 +17,24 @@
             robotArm.grab();
             robotArm.scan();
             for (var a = 1; a <loop; a++) {
-            if(robotArm.scan()== "null"){
-                robotArm.drop();
-                var loop = 0
+                if(robotArm.scan()== "null"){
+                    robotArm.drop();
+                    var loop = 0
                 }else{
-            for (var b = 0; b <5; b++) {
-                    robotArm.moveRight();
+                    for (var b = 0; b <5; b++) {
+                            robotArm.moveRight();
+                    }
+                            robotArm.drop();
+                        for (var c = 0; c <5; c++) {
+                                robotArm.moveLeft();
+                        }
+                    robotArm.grab();
+                    robotArm.scan();
                 }
-                robotArm.drop();
-            for (var c = 0; c <5; c++) {
-                    robotArm.moveLeft();
-                }
-                robotArm.grab();
-                robotArm.scan();
             }
-        }
-            for (var d = 0; d <3; d++) {
-                robotArm.moveRight();
-    }
+               for (var d = 0; d <3; d++) {
+                   robotArm.moveRight();
+               }
     
 
 

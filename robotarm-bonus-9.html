@@ -44,33 +44,33 @@
             robotArm.moveLeft();
         for (var c = 0; c <3; c++) {
             robotArm.grab();
-        for (var d = 0; d <rood; d++) {
-            robotArm.moveLeft();
-        }
-            robotArm.drop();
             for (var d = 0; d <rood; d++) {
-            robotArm.moveRight();
-        }
-            rood = rood-1
+                robotArm.moveLeft();
+            }
+                robotArm.drop();
+                for (var d = 0; d <rood; d++) {
+                    robotArm.moveRight();
+                }
+                rood = rood-1
         }
             robotArm.moveRight();
 
         for (var e = 0; e <3; e++) {
             robotArm.grab();
-        for (var f = 0; f <wit; f++) {
-            robotArm.moveLeft();
-        }
+            for (var f = 0; f <wit; f++) {
+                robotArm.moveLeft();
+            }
             robotArm.drop();
-        for (var g = 0; g <wit; g++) {
-            robotArm.moveRight();
-        }
+                for (var g = 0; g <wit; g++) {
+                    robotArm.moveRight();
+                }
             var wit = wit + 1
-    }
+        }
 
         robotArm.grab();
         for (var h = 0; h <3; h++) {
         robotArm.moveLeft();
-    }
+        }
         robotArm.drop();
         for (var h = 0; h <3; h++) {
         robotArm.moveRight();
@@ -82,11 +82,11 @@
         robotArm.drop();
         for (var h = 0; h <4; h++) {
         robotArm.moveRight();
-    }   
+        }   
         robotArm.grab();
         for (var h = 0; h <4; h++) {
         robotArm.moveLeft();
-    }
+        }
         robotArm.drop();
 
 
